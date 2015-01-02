@@ -10,43 +10,45 @@ import (
 )
 
 func Example() {
-	goconsole.Title = "*** Go Console ***\n"
-	goconsole.Prompt = "> "
-	goconsole.NotFound = "Command not found: "
-	goconsole.NewLine = "\n"
-	goconsole.Add("hello", "Prints: world", func(typed string) {
+	con := goconsole.New()
+	con.Title = "*** Go Console ***\n"
+	con.Prompt = "> "
+	con.NotFound = "Command not found: "
+	con.NewLine = "\n"
+	con.Add("hello", "Prints: world", func(typed string) {
 		fmt.Print("world")
 	})
-	goconsole.Start()
+	con.Start()
 }
 
 func ExampleAdd() {
-	goconsole.Add("hello", "Prints: world", func(typed string) {
+	con := goconsole.New()
+	con.Add("hello", "Prints: world", func(typed string) {
 		fmt.Print("world")
 	})
 }
 
 func ExampleClear() {
-	goconsole.Clear()
+	con := goconsole.New()
+	con.Clear()
 }
 
 func ExampleClearScreen() {
 	goconsole.ClearScreen()
 }
 
-func ExampleLeave() {
-	goconsole.Leave()
-}
-
 func ExampleReadline() {
 	fmt.Print("What is your favorite color? ")
-	typed = Readline()
+	typed := goconsole.Readline()
+	fmt.Print(typed)
 }
 
 func ExampleRemove() {
-	goconsole.Remove("help")
+	con := goconsole.New()
+	con.Remove("help")
 }
 
 func ExampleStart() {
-	goconsole.Start()
+	con := goconsole.New()
+	con.Start()
 }

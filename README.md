@@ -17,14 +17,15 @@ import (
 )
 
 func main() {
-	goconsole.Title = "*** Go Console ***\n"
-	goconsole.Prompt = "> "
-	goconsole.NotFound = "Command not found: "
-	goconsole.NewLine = "\n"
-	goconsole.Add("hello", "Prints: world", func(typed string) {
+	con := goconsole.New()
+	con.Title = "*** Go Console ***\n"
+	con.Prompt = "> "
+	con.NotFound = "Command not found: "
+	con.NewLine = "\n"
+	con.Add("hello", "Prints: world", func(typed string) {
 		fmt.Print("world")
 	})
-	goconsole.Start()
+	con.Start()
 }
 ```
 
