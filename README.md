@@ -1,4 +1,4 @@
-goregistry
+goconsole
 ==========
 [![GoDoc](https://godoc.org/github.com/josephspurrier/goconsole?status.svg)](https://godoc.org/github.com/josephspurrier/goconsole)
 
