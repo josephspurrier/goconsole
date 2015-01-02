@@ -8,7 +8,7 @@ Package provides simple command line functionality with the ability to easily ad
 
 ## Code
 
-```
+~~~ go
 package main
 
 import (
@@ -27,7 +27,7 @@ func main() {
 	})
 	con.Start()
 }
-```
+~~~
 
 ## Interface
 ```
